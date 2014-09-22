@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class greetPerson {
+
+    private String greetPerson;
+    private String name;
+
+    public greetPerson(String g) {
+	greeting = g;
+    }
+    
+    public greetPerson() {
+	greeting = "Hi There";
+    }
+
+    public void setName(String n) {
+	name = n;
+    }
+
+    public String greetPerson(String name) {
+	return greeting + " " + name
