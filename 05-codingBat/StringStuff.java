@@ -22,3 +22,5 @@ public class StringStuff {
 	} 
     }
 }
+
+// Lab on Wednesday is on Jeanne Locker's repository
