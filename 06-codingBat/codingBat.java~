@@ -1,0 +1,21 @@
+public class codingBat {
+
+public String frontTimes(String str, int n) {
+    if (n == 0) {
+	return "";
+    }
+    if (str.length() < 4) {
+	String shorter = str;
+	while (n > 1) {
+	    str = shorter + str;
+	    n = n - 1;
+	}
+	return str;
+    }
+    String longer = str.substring(0,3);
+    while (n > 1) {
+	longer = longer + str.substring(0,3);
+	n = n - 1;
+    }
+    return longer;
+}
