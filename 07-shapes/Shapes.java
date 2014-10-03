@@ -52,4 +52,83 @@ public class Shapes {
 	}
 	return fin;
     }
+    
+    public String tri3(int h) {
+	int stars = 1;
+	int count = 0;
+	int row = 0;
+	int spaces = h - (row + 1);
+	String fin = "";
+	while (row < h) {
+	    while (spaces > 0) {
+		fin = fin + " ";
+		spaces = spaces - 1;
+	    }
+	    while (count < stars) {
+		fin = fin + "*";
+		count = count + 1;
+	    }
+	    count = 0;
+	    stars = stars + 2;
+	    row = row + 1;
+	    spaces = h - (row + 1);
+	    fin = fin + "\n";
+	}
+	return fin;
+    }
+    
+    public String diamond(int h) {
+	int stars = 1;
+	int count = 0;
+	int row = 0;
+	int rowCount = 0;
+	int spaces = rowCount + (h / 2);
+	String fin = "";
+	while (row < h) {
+	    while (spaces > 0) {
+		fin = fin + " ";
+		spaces = spaces - 1;
+	    }
+	    while (count < stars) {
+		fin = fin + "*";
+		count = count + 1;
+	    }
+	    if (row < (h / 2)) {
+		stars = stars + 2;
+		rowCount = rowCount + 1;
+	    } else {
+		stars = stars - 2;
+		rowCount = rowCount - 1;
+	    }
+	    count = 0;
+	    row = row + 1;
+	    spaces = h - (rowCount + ((h / 2) + 1));
+	    fin = fin + "\n";
+	}
+	return fin;
+    }
+
+    public String tri4(int h) {
+	String fin = "";
+        int row = 0;
+	int spaces = 0;
+	int stars = 0;
+	while (row < h) {
+	    while (spaces < row) {
+		fin = fin + " ";
+		spaces = spaces + 1;
+	    }
+	    while (stars < (h - row)) { 
+		fin = fin + "*";
+	        stars = stars + 1;
+	    }
+	    fin = fin + "\n";
+	    spaces = 0;
+	    stars = 0;
+	    row = row + 1;
+	}
+	return fin;
+    }
+		
 }
+   
