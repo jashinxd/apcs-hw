@@ -1,6 +1,14 @@
 
 public class Shapes {
 
+    public String line(String c, int repeats){
+	String s = "";
+	for (int count = 0; count < repeats; count = count + 1){
+	    s = s + c;
+	}
+	return s;
+    }
+
     public String box(int r, int c){
 	String s= "";
 	int row = 0;
@@ -130,5 +138,13 @@ public class Shapes {
 	return fin;
     }
 		
+    public String frame(int col, int row) {
+	String fin = line("*", row) + "\n";
+	for (int count = 2; count < col; count = count + 1) {
+	    fin = fin + "*" + line(" ", row - 2) + "*\n";
+	}
+        fin = fin + line("*", row);
+	return fin;
+    }
 }
    
