@@ -5,8 +5,4 @@ public class Mage extends Basechar{
     public int getManna(){
 	return manna;
     }
-
-    public void setManna(int i){
-	manna = i;
-    }
 }
