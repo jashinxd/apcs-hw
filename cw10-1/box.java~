@@ -1,0 +1,17 @@
+public class box {
+    public String box(int r, int c) {
+	countRow = int r;
+	countColumn = int c;
+	String fin = "";
+	while (countrow > 0) {
+	    while (countColumn > 0) {
+		fin = fin + "*";
+		countColumn = countColumn - 1;
+	    }
+	    countColumn = int c;
+	    fin = fin + "\n";
+	    countRow = countRow - 1;
+	}
+    }
+}
+		

@@ -1,8 +1,8 @@
 public class Driver {
 
     public static void main(String[] args){
-	Basechar c = new Basechar("Hello"),c2;
-	//Warrior w = new Warrior("Groo"),w2;
+	//Basechar c = new Basechar("Hello"),c2;
+	Warrior w = new Warrior("Groo"),w2;
 	Mage mdef = new Mage();
 	Mage mnam = new Mage("Mr. Sage"),m2;
 	Mage mboth = new Mage("Mr. Page", 300);
@@ -17,7 +17,7 @@ public class Driver {
 	//System.out.println(w.toString());
 	//System.out.println(w);
 	
-	//System.out.println(m.getName());
+	System.out.println(w.getName());
 	System.out.println(mboth.getManna());
 	System.out.println(mboth.getName());
 

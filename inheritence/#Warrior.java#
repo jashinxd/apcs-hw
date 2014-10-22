@@ -1,7 +1,7 @@
 /* subclass of Basechar */
 public class Warrior extends Basechar{
-    //public Warrior (){
-    //}
+    public Warrior (){
+    }
 
     public Warrior(String n){
 	setName(n);

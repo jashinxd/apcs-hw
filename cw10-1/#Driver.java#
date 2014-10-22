@@ -1,0 +1,6 @@
+public class Driver {
+    public static void main(String[] args) {
+	shape box1 = new shape();
+	System.out.println(box1.box(4,3));
+    }
+}
