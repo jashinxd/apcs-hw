@@ -21,7 +21,7 @@ public class Driver{
         int crit2 = 0;
         int rng = number.nextInt(100);
         while (Player.equals("")){
-            System.out.print("Choose a Class!\nMage or Warrior: ");
+            System.out.print("Choose a Class!\nMage or Warrior? ");
             String input = sc.nextLine();
             if (input.equals("Mage") || input.equals("Warrior")){
                 Player = input;
@@ -42,92 +42,132 @@ public class Driver{
                 maxhealth1 = Player1.gethealth();
                 mana1 = Player1.getmana();
                 crit1 = Player1.getcrit();
-                System.out.println("Welcome to this game, " + name);
+                System.out.println("Welcome, " + name);
                 System.out.print("Having heard rumors of a hidden treasure deep in a haunted cave,");
                 System.out.print("you are a mage seeking to gather the riches, give it to the ");
-                System.out.print("king, and therefore gain his favor in order to have a seat in his court.");
+                System.out.print("king, and therefore gain his favor in order to have a seat in his court. ");
                  try {
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {}
-                System.out.print("However, along with the whispers of endless gold and jewels, there are voices ");
+                System.out.print("\nHowever, along with the whispers of endless gold and jewels, there are voices ");
                 System.out.print("that speak of the witch ");
                 System.out.print("that lurks deep within the cave.");
-                System.out.print("She creates monsters on a whim - with a flick of her crooked wand,"); 
+		try {
+		    Thread.sleep(3000);
+		} catch (InterruptedException e) {}
+                System.out.print(" She creates monsters on a whim - with a flick of her crooked wand, "); 
                 System.out.print("she can produce a disgusting, ");
-                System.out.print("slippery slime creature. Ogres are her warrior guards and bunnies are her pets.");
+                System.out.print("slippery slime creature.\n");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {}
+                System.out.print("Ogres are her warrior guards and bunnies are her pets. ");
                 System.out.println("The legendary Demon King is also said to inhabit the cave.");
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(5000);
                 } catch (InterruptedException e) {}
                 System.out.print("\n");
-                System.out.println("Many bravehearts have attempted to plunder the cave but all have failed, defeated by one of the countless monsters slinking along the deep, dark passageways. \n");
-                System.out.println("But you are no ordinary Mage\n");
+                System.out.print("Many bravehearts have attempted to plunder the cave but all have failed, defeated by one of the countless monsters slinking along the deep, dark passageways");
+		try {
+		    Thread.sleep(2000);
+		} catch (InterruptedException e) {}
+		System.out.print(".");
+		try {
+		    Thread.sleep(1500);
+		} catch (InterruptedException e) {}
+		System.out.print(".");
+		try {
+		    Thread.sleep(1500);
+		} catch (InterruptedException e) {}
+		System.out.print(".");
+		try {
+		    Thread.sleep(4000);
+		} catch (InterruptedException e) {}
+                System.out.println("\nBut you are no ordinary Mage. \n");
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {}
-                System.out.println("You know of the witch's legendary power. You have experienced her ruthless black magic firsthand - as, of course, she was once your mentor. The goldlust drove her crazy and now she stands to defend her gold and jewels until the very end.\n");
+                System.out.println("You know of the witch's legendary power. You have experienced her ruthless black magic firsthand - as, of course, she was once your mentor. The lust for gold drove her crazy and now she stands to defend her riches and jewels until the very end.\n");
                 System.out.println("You Have " + Player1.gethealth() + " Health");
                 System.out.println("You Have " + Player1.getattack() + " Attack Power");
                 System.out.println("You Have " + Player1.getarmor() + " Armor");
                 System.out.println("You Have " + Player1.getmana() + " Mana");
                 System.out.println("You Have " + Player1.getcrit() + "% chance of a critical hit!");
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(4500);
                 } catch (InterruptedException e) {}
                 System.out.println("Good Luck " + Player1.getname() + "!");
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {}
             }
             
+            while (name.equals("")){
             if(Player.equals("Warrior")){
                 System.out.print("What is your name, adventurer? ");
                 name = sc.nextLine();
-                Warrior Player1 = new Warrior(name);
+                Mage Player1 = new Mage(name);
                 attack1 = Player1.getattack();
                 armor1 = Player1.getarmor();
                 health1 = Player1.gethealth();
                 maxhealth1 = Player1.gethealth();
                 mana1 = Player1.getmana();
                 crit1 = Player1.getcrit();
-                System.out.println("Welcome to this game, " + name);
+                System.out.println("Welcome, " + name);
                 System.out.print("Having heard rumors of a hidden treasure deep in a haunted cave,");
-                System.out.print("you are a Warrior seeking to gather the riches, give it to the ");
-                System.out.print("king, and therefore gain his favor in order to have a seat in his court.");
+                System.out.print("you are a warrior seeking to gather the riches, give it to the ");
+                System.out.print("king, and therefore gain his favor in order to have a seat in his court. ");
                  try {
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {}
-                System.out.print("However, along with the whispers of endless gold and jewels, there are voices ");
+                System.out.print("\nHowever, along with the whispers of endless gold and jewels, there are voices ");
                 System.out.print("that speak of the witch ");
                 System.out.print("that lurks deep within the cave.");
+		try {
+		    Thread.sleep(2000);
+		} catch (InterruptedException e) {}
                 System.out.print("She creates monsters on a whim - with a flick of her crooked wand,"); 
                 System.out.print("she can produce a disgusting, ");
                 System.out.print("slippery slime creature. Ogres are her warrior guards and bunnies are her pets.");
                 System.out.println("The legendary Demon King is also said to inhabit the cave.");
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(5000);
                 } catch (InterruptedException e) {}
                 System.out.print("\n");
-                System.out.println("Many bravehearts have attempted to plunder the cave but all have failed, defeated by one of the countless monsters slinking along the deep, dark passageways. \n");
-                System.out.println("But you are no ordinary Warrior\n");
+                System.out.print("Many bravehearts have attempted to plunder the cave but all have failed, defeated by one of the countless monsters slinking along the deep, dark passageways");
+		try {
+		    Thread.sleep(1000);
+		} catch (InterruptedException e) {}
+		System.out.print(".");
+		try {
+		    Thread.sleep(1000);
+		} catch (InterruptedException e) {}
+		System.out.print(".");
+		try {
+		    Thread.sleep(1000);
+		} catch (InterruptedException e) {}
+		System.out.print(".");
+		try {
+		    Thread.sleep(4000);
+		} catch (InterruptedException e) {}
+                System.out.println("\nBut you are no ordinary warrior. \n");
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {}
-                System.out.println("Coming from a different land, you wish to gain the king's favor in order to benefit your people\n");
+                System.out.println("You know of the witch's legendary power. You have experienced her ruthless black magic firsthand - as she was once your friend. However, the lust for gold drove her crazy and now she stands to defend her riches and jewels until the very end.\n");
                 System.out.println("You Have " + Player1.gethealth() + " Health");
                 System.out.println("You Have " + Player1.getattack() + " Attack Power");
                 System.out.println("You Have " + Player1.getarmor() + " Armor");
                 System.out.println("You Have " + Player1.getmana() + " Mana");
                 System.out.println("You Have " + Player1.getcrit() + "% chance of a critical hit!");
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {}
                 System.out.println("Good Luck " + Player1.getname() + "!");
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {}
             }
-        }
         
         Monster Player2 = new Monster();
         attack2 = Player2.getattack();
@@ -284,4 +324,8 @@ public class Driver{
         
     }
 }
+}
+}
+    
+
     
