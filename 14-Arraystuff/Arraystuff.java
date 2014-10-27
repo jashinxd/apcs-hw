@@ -35,13 +35,12 @@ public class Arraystuff {
 
     public int find(int n) {
 	int result = 0;
-	for (int i = 0; i < a.length; i++){
-	    if (a[i] == n && result == 0){
+	for (int i = 0; i < a.length && result == 0; i++){
+	    if (a[i] == n){
 		result = i;
 	    }
-	    else if (i == 100) {
+	    else if (i == 99) {
 		result = -1;
-		return -1;
 	    }    
 	}
 	return result;
