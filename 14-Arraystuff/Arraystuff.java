@@ -61,6 +61,6 @@ public class Arraystuff {
 	Arraystuff as = new Arraystuff();
 	System.out.println(as);
 	System.out.println("Index of first appearance of 105: " + as.find(105));
-	
+	System.out.println("Largest value in the array is " + as.maxVal()); 	
     }
 }
