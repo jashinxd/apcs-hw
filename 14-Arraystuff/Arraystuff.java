@@ -44,7 +44,7 @@ public class Arraystuff {
     }
 
     public int maxVal() {
-	int largest = 0;
+	int largest = a[0];
 	for (int i = 0; i < a.length; i++) {
 	    if (a[i] > largest) {
 		largest = a[i];
@@ -52,6 +52,22 @@ public class Arraystuff {
 	}
 	return largest;
     }
+
+    public int sum67(int[] nums) {
+	int sum = 0;
+	int subtract = 0;
+	int num1 = 0;
+	for (int i = 0; i < nums.length; i++){
+	    if (nums[i] != 6 && num1 != 6){
+		sum = sum + nums[i];
+	    }
+	    else if (nums[i] = 6){
+		num1 = 6;
+	    }
+    else if (nums[i] = 7){
+	num1 = 0;
+    }  
+	}
 
     public static void main(String[] args) {
 	Arraystuff as = new Arraystuff();
