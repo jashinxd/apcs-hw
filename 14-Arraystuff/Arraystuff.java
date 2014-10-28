@@ -55,24 +55,32 @@ public class Arraystuff {
 
     public int sum67(int[] nums) {
 	int sum = 0;
-	int subtract = 0;
-	int num1 = 0;
-	for (int i = 0; i < nums.length; i++){
-	    if (nums[i] != 6 && num1 != 6){
+	boolean dontCount = false;
+	for (int i = 0; i < nums.length; i++) {
+	    if (nums[i] != 6 && dontCount == false) {
 		sum = sum + nums[i];
 	    }
-	    else if (nums[i] = 6){
-		num1 = 6;
+	    if (nums[i] == 6) {
+		dontCount = true;
 	    }
-    else if (nums[i] = 7){
-	num1 = 0;
-    }  
+	    if (nums[i] == 7) {
+		dontCount = false;
+	    }
 	}
+	return sum;
+    }
 
     public static void main(String[] args) {
 	Arraystuff as = new Arraystuff();
+	int[] test = new int[5];
+	test[0] = 1;
+	test[1] = 6;
+	test[2] = 4;
+	test[3] = 7;
+	test[4] = 3;
 	System.out.println(as);
 	System.out.println("Index of first appearance of 105: " + as.find(105));
-	System.out.println("Largest value in the array is " + as.maxVal()); 	
+	System.out.println("Largest value in the array is " + as.maxVal());
+	System.out.println("sum67: " + as.sum67(test));
     }
 }
