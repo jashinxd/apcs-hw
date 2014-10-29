@@ -1,0 +1,4 @@
+Ideas for Arrays:
+1. Use an array to store the stats
+   ex) {Health, Armor, Attack, Mana}
+2. Use an array to store com
