@@ -160,6 +160,29 @@ public class Arraystuff {
 	return freq;
     }
 
+    /* Does not work
+    public int maxMirror(int[] nums) {
+	int[] reverseArray = new int[nums.length];
+	int lengthCount = 0;
+	int revIndex = 0;
+	int forIndex = 0;
+	for (int i = 0; i < nums.length; i++) {
+	    reverseArray[i] = nums[nums.length - i - 1];
+	}
+	while (forIndex < nums.length) {
+	    if (nums[forIndex] == reverseArray[revIndex]) {
+		lengthCount++;
+		forIndex++;
+	    }
+	    revIndex++;
+	    if (revIndex == nums.length - 1) {
+		revIndex = 0;
+	    } 
+	}
+	return lengthCount;
+    }
+    */
+
     public static void main(String[] args) {
 	Arraystuff as = new Arraystuff();
 	int[] test1 = new int[]{1, 6, 4, 7, 3};
