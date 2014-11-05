@@ -183,6 +183,16 @@ public class Arraystuff {
     }
     */
 
+    public int mode() {
+	int mode = 0;
+	for (int i = 0; i < a.length; i++){
+	    if (freq(a[i]) > mode) {
+		mode = freq(a[i]);
+	    }
+	}
+	return mode;
+    }
+
     public static void main(String[] args) {
 	Arraystuff as = new Arraystuff();
 	int[] test1 = new int[]{1, 6, 4, 7, 3};
@@ -190,6 +200,7 @@ public class Arraystuff {
 	int[] test3 = new int[]{10, 1, 9, 20};
 	int[] test4 = new int[]{1, 2, 4, 5, 7, 6, 5, 6, 7, 6};
 	int[] test5 = new int[]{1, 2, 3, 1, 0, 2, 3};
+	int[] test6 = new int[]{1, 2, 3, 1, 1, 1, 2};
 	System.out.println(as);
 	System.out.println("Index of first appearance of 105: " + as.find(105));
 	System.out.println("Largest value in the array is " + as.maxVal());
@@ -199,6 +210,7 @@ public class Arraystuff {
 	System.out.println("tripleUp with array {1, 2, 4, 5, 7, 6, 5, 6, 7, 6}: " + as.tripleUp(test4));
 	System.out.println("canBalance with array {1, 2, 3, 1, 0, 2, 3}: " + as.canBalance(test5));
 	System.out.println("seriesUp with int 6:  " + as.printArray(as.seriesUp(6)));
-	System.out.println("freq with int 4: " + as.freq(2)); 
+	System.out.println("freq with int 4: " + as.freq(2));
+	System.out.println("as.mode():  " + as.mode());
     }
 }
