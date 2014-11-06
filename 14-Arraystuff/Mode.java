@@ -68,7 +68,7 @@ public class Mode {
     }
 
 
-    /*
+    
     public int mode(){
 	int count = 0;
 	int modeIndex = 0;
@@ -81,7 +81,7 @@ public class Mode {
 	System.out.println("modeval = "+a[modeIndex]);
 	return count;
     }
-    */
+    
 
     public int fastMode(){
 	int max = maxVal();
