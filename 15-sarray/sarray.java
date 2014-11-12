@@ -38,6 +38,9 @@ public class sarray {
     //Main Methods
     public boolean add(int i) {
 	//Add int to the end, grow if needed
+	/*if (i != (int)i){
+	    throw new ArrayStoreException();
+	}*/
 	if (data[data.length - 1] != 0){
 	    add1index();
 	}
