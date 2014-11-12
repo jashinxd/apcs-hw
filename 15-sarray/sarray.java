@@ -51,6 +51,9 @@ public class sarray {
 
     public void add(int index, int i) {
 	//Add at index, shifts everything else down
+	if (index > data.length - 1 || index < 0) {
+	    throw new ArrayIndexOutOfBoundsException();
+	}
 	int[] data2 = new int[data.length + 1];
 	if (data[data.length - 1] != 0){
 	    add1index();
@@ -63,12 +66,18 @@ public class sarray {
 
     public int get(int index) {
 	//returns int at index 
+	if (index > data.length - 1 || index < 0) {
+	    throw new ArrayIndexOutOfBoundsException();
+	}
         return data[index];
     }
 
     public int set(int index, int i) {
 	//Set item at index to int t
 	//returns old value
+	if (index > data.length - 1 || index < 0) {
+	    throw new ArrayIndexOutOfBoundsException();
+	} 
 	int oldVal = get(index);
 	data[index] = i;
 	return oldVal;
@@ -79,6 +88,9 @@ public class sarray {
     }
 
     public int remove(int index) {
+	if (index > data.length - 1 || index < 0) {
+	    throw new ArrayIndexOutOfBoundsException();
+	}
 	int oldVal = data[index];
 	int[] data2 = new int[data.length - 1];
 	for (int i = index; i < data.length - 1; i++) {
@@ -102,7 +114,49 @@ public class sarray {
 	System.out.println("After s.set(7,1): " + s.printArray(s.data));
 	System.out.println("Size of data array: " + s.size());
 	System.out.println("s.remove(7): " + s.remove(7));
-	System.out.println("After s.remove(7): " + s.printArray(s.data));	
+	System.out.println("After s.remove(7): " + s.printArray(s.data));
+	System.out.println("\nError Tests:");
+	try {
+	    s.add(4,2);
+	    System.out.println("Everything Worked!");
+	    System.out.println("After s.add(4,2)" + s.printArray(s.data));
+	} catch (ArrayIndexOutOfBoundsException e){
+	    System.out.println("Error: We Got: " + e);
+	} catch (Exception e) {
+	    System.out.println("Other Error");
+	}
+	try {
+	    s.add(12,2);
+	    System.out.println("Everything Worked!");
+	} catch (ArrayIndexOutOfBoundsException e){
+	    System.out.println("Error: We Got: " + e);
+	} catch (Exception e) {
+	    System.out.println("Other Error");
+	}
+	try {
+	    s.get(-12);
+	    System.out.println("Everything Worked!");
+	} catch (ArrayIndexOutOfBoundsException e){
+	    System.out.println("Error: We Got: " + e);
+	} catch (Exception e) {
+	    System.out.println("Other Error");
+	}
+	try {
+	    s.set(13,4);
+	    System.out.println("Everything Worked!");
+	} catch (ArrayIndexOutOfBoundsException e){
+	    System.out.println("Error: We Got: " + e);
+	} catch (Exception e) {
+	    System.out.println("Other Error");
+	}
+	try {
+	    s.remove(15);
+	    System.out.println("Everything Worked!");
+	} catch (ArrayIndexOutOfBoundsException e){
+	    System.out.println("Error: We Got: " + e);
+	} catch (Exception e) {
+	    System.out.println("Other Error");
+	}
     }
 }
 
