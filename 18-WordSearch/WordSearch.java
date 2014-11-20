@@ -30,31 +30,61 @@ public class WordSearch{
 	return s;
     }
     
-    public void addWordH(String w,int row, int col){
+    public void addWordH(String word,int row, int col, char direction){
 	int r = row, c = col;
-	if (row > board.length && col > board[1].length ){
-	    System.out.println("Your indexes are out of range!");
-	} else {
-	    if (board[1].length - col >= w.length()){
-		for (int i=0;i<w.length();i++){
-		    board[r][c] = w.charAt(i);
-		    c++;
+	String w = word;
+	if (direction == 'b') {
+            c = c - (w.length() - 1);
+	    if (c >= 0) {
+		String news = "";
+		for (int i = w.length() - 1; i >= 0; i--) {
+		    news += w.substring(i,i+1);
 		}
+		w = news;
 	    } else {
-		System.out.println("You cannot place this here!");
+		System.out.println("Your word will not fit in that space!");
+	    }
+	}
+	if (c >= 0) {
+	    if (row > board.length || c > board[1].length) {
+		System.out.println("Your indexes are out of range!");
+	    } else if (board[1].length - c < w.length()) {
+		System.out.println("Your word will not fit in that space!");
+	    } else {
+		int lastIndex = w.length() - 1;
+		boolean matchEnd = true;
+		for (int i = 0; i < w.length(); i++) {
+		    if (board[r][c+i] != '.' && board[r][c+i] != w.charAt(i)) {
+			matchEnd = false;
+			System.out.println("You will overwrite a word!");
+			break;
+		    }
+		}
+		if (matchEnd){
+		    for (int i = 0; i < w.length(); i++) {
+			board[r][c] = w.charAt(i);
+			c++;
+		    }
+		} 
 	    }
 	}
     }
     
     public static void main(String[] args) {
 	WordSearch w = new WordSearch();
+	System.out.println("Blank Board: ");
 	System.out.println(w);
-	w.addWordH("hello",3,25);
-	//w.addWordH("look",3,8);
-	//w.addWordH("look",3,5);
-	w.addWordH("hello",100,5);
+	w.addWordH("hello",3,12,'f');
+	w.addWordH("look",3,15,'f');
+	w.addWordH("bike",3,5,'f');
+	w.addWordH("keylhpe",3,7,'f');
+	w.addWordH("lemur",5,10,'f');
+	w.addWordH("triangle",5,4,'f');
+	w.addWordH("apple",7,7,'b');
+	w.addWordH("pear",8,2,'b');
+	//w.addWordH("hello",100,5);
 	//w.addWordH("hello",30,555);
-	
+	System.out.println("After Adding: ");
 	System.out.println(w);
     }
 }
