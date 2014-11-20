@@ -29,23 +29,29 @@ public class WordSearch{
 	}
 	return s;
     }
+
+    public String reverseString(String s) {
+	String news = "";
+	for (int i = s.length() - 1; i >= 0; i--) {
+	    news += s.substring(i,i+1);
+	}
+	return s;
+    }
     
     public void addWordH(String word,int row, int col, char direction){
 	int r = row, c = col;
 	String w = word;
+	boolean add = true;
 	if (direction == 'b') {
             c = c - (w.length() - 1);
 	    if (c >= 0) {
-		String news = "";
-		for (int i = w.length() - 1; i >= 0; i--) {
-		    news += w.substring(i,i+1);
-		}
-		w = news;
+		w = reverseString(w);
 	    } else {
 		System.out.println("Your word will not fit in that space!");
+		add = false;
 	    }
 	}
-	if (c >= 0) {
+	if (add) {
 	    if (row > board.length || c > board[1].length) {
 		System.out.println("Your indexes are out of range!");
 	    } else if (board[1].length - c < w.length()) {
