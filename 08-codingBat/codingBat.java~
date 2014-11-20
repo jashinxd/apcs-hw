@@ -1,0 +1,9 @@
+public class codingBat {
+    public String stringSplosion(String str) {
+	String fin = "";
+	for (int index = 1, index < str.length(), index = index + 1) {
+	    fin = fin + str.substring(0,index);
+	}
+	return fin;
+    }
+}

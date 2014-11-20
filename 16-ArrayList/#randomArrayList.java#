@@ -1,0 +1,4 @@
+public class randomArrayList{
+    public randomArray();
+    ArrayList<Integer> al = new ArrayList<Integer>();
+    
