@@ -157,7 +157,10 @@ public class WordSearch{
 	if (r > board.length || c > board[1].length) {
 	    shouldAdd = false;
 	} else if (direction == 'b') {
-	    if (testRight || testUp) {
+	    System.out.println(board[r].length - c);
+	    System.out.println(w.length());
+	    System.out.println(r - lastIndex);
+	    if (board[r].length - c < w.length() || r - lastIndex < 0) {
 		shouldAdd = false;
 	    }
 	} else if (direction == 'c') {
@@ -245,7 +248,7 @@ public class WordSearch{
 	w.addWordV("lion",7,4,'d');
 	w.addWordV("hike",0,13,'d');
 	w.addWordV("back",6,18,'u');
-	w.addWordD("triangle",18,12,'c');
+	w.addWordD("triangle",18,27,'b');
 	//w.addWordH("hello",100,5);
 	//w.addWordH("hello",30,555);
 	System.out.println("After Adding: ");
