@@ -248,7 +248,8 @@ public class WordSearch{
 	WordSearch w = new WordSearch();
 	System.out.println("Blank Board: ");
 	System.out.println(w);
-	/*
+
+	/* --Add words at specific places--
 	w.addWordH("hello",3,12,'r');
 	w.addWordH("look",3,15,'r');
 	w.addWordH("bike",3,5,'r');
@@ -264,7 +265,8 @@ public class WordSearch{
 	//w.addWordH("hello",100,5);
 	//w.addWordH("hello",30,555);
 	*/
-
+	
+	/* --Add words randomly-- */
 	w.addWordRand("hello");
 	w.addWordRand("look");
 	w.addWordRand("bike");
@@ -279,6 +281,21 @@ public class WordSearch{
 	w.addWordRand("triangle");
 	System.out.println("After Adding: ");
 	System.out.println(w);
+	
+	/* -- Add words from list *DOES NOT WORK*
+	Scanner sc=null;
+	try {
+	    sc = new Scanner(new File("words.txt"));
+	} catch (Exception e) {
+	    System.out.println("Can't open file");
+	    System.exit(0);
+	}
+	while (sc.hasNext()) {
+	    String s = sc.next();
+	    System.out.println(s);
+	    w.addWordRand(s);
+	}
+	*/
 
 	w.fill();
 	System.out.println("Filling out rest of letters: ");
