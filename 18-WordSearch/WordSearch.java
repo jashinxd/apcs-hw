@@ -182,10 +182,11 @@ public class WordSearch{
 	}  
     }
 
-    public void addWordRand(String word) {
+    public boolean addWordRand(String word) {
 	Random rnd = new Random();
 	int r, c, type, randDir;
 	char d = '.';
+	boolean canAdd = false;
 	for (int i = 0; i < 100; i++) {
 	    r = rnd.nextInt(board.length);
 	    c = rnd.nextInt(board[1].length);
@@ -199,6 +200,7 @@ public class WordSearch{
 		}
 		if (addWordHTest(word, r, c, d)) {
 		    addWordH(word, r, c, d);
+		    canAdd = true;
 		    break;
 		}	
 	    } else if (type == 1) {
@@ -210,6 +212,7 @@ public class WordSearch{
 		}
 		if (addWordVTest(word, r, c, d)) {
 		    addWordV(word, r, c, d);
+		    canAdd = true;
 		    break;
 		}
 	    } else if (type == 2) {
@@ -225,10 +228,12 @@ public class WordSearch{
 		}
 		if (addWordDTest(word, r, c, d)) {
 		    addWordD(word, r, c, d);
+		    canAdd = true;
 		    break;
 		}
 	    }
 	}
+	return canAdd;
     }
 
     public void fill() {
@@ -246,8 +251,6 @@ public class WordSearch{
 
     public static void main(String[] args) {
 	WordSearch w = new WordSearch();
-	System.out.println("Blank Board: ");
-	System.out.println(w);
 
 	/* --Add words at specific places--
 	w.addWordH("hello",3,12,'r');
@@ -266,7 +269,7 @@ public class WordSearch{
 	//w.addWordH("hello",30,555);
 	*/
 	
-	/* --Add words randomly-- */
+	/* --Add words randomly--
 	w.addWordRand("hello");
 	w.addWordRand("look");
 	w.addWordRand("bike");
@@ -279,11 +282,11 @@ public class WordSearch{
 	w.addWordRand("hike");
 	w.addWordRand("back");
 	w.addWordRand("triangle");
-	System.out.println("After Adding: ");
-	System.out.println(w);
-	
-	/* -- Add words from list *DOES NOT WORK*
+	*/
+
+	/* --Adds words from file-- */
 	Scanner sc=null;
+	ArrayList<String> wordList = new ArrayList<String>();
 	try {
 	    sc = new Scanner(new File("words.txt"));
 	} catch (Exception e) {
@@ -292,10 +295,15 @@ public class WordSearch{
 	}
 	while (sc.hasNext()) {
 	    String s = sc.next();
-	    System.out.println(s);
+	    wordList.add(s);
 	    w.addWordRand(s);
 	}
-	*/
+
+	System.out.println("Words imported from file: ");
+	System.out.println(wordList + "\n");
+
+	System.out.println("After Adding: ");
+	System.out.println(w);
 
 	w.fill();
 	System.out.println("Filling out rest of letters: ");
