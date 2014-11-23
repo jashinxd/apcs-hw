@@ -186,7 +186,7 @@ public class WordSearch{
 	Random rnd = new Random();
 	int r, c, type, randDir;
 	char d = '.';
-	for (int i = 0; i < 20; i++) {
+	for (int i = 0; i < 100; i++) {
 	    r = rnd.nextInt(board.length);
 	    c = rnd.nextInt(board[1].length);
 	    type = rnd.nextInt(3);
@@ -231,6 +231,19 @@ public class WordSearch{
 	}
     }
 
+    public void fill() {
+	Random rnd = new Random();
+	char[] letters = new char[]{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+	for (int r = 0; r < board.length; r++) {
+	    for (int c = 0; c < board[1].length; c++) {
+		int rInd = rnd.nextInt(26); 
+		if (board[r][c] == '.') {
+		    board[r][c] = letters[rInd];
+		}
+	    }
+	}
+    }
+
     public static void main(String[] args) {
 	WordSearch w = new WordSearch();
 	System.out.println("Blank Board: ");
@@ -264,8 +277,11 @@ public class WordSearch{
 	w.addWordRand("hike");
 	w.addWordRand("back");
 	w.addWordRand("triangle");
-
 	System.out.println("After Adding: ");
+	System.out.println(w);
+
+	w.fill();
+	System.out.println("Filling out rest of letters: ");
 	System.out.println(w);
     }
 }
