@@ -1,0 +1,59 @@
+Loading 00debian-vars...done
+Loading /etc/emacs/site-start.d/50dictionaries-common.el (source)...
+Loading /var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...
+Error while loading 50dictionaries-common: Symbol's value as variable is void: debian-aspell-only-dictionary-alist
+For information about GNU Emacs and the GNU system, type C-h C-a.
+(New file)
+Loading cc-langs...done
+Loading vc-git...done
+Mark set
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+byte-code: Beginning of buffer [13 times]
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+byte-code: End of buffer [3 times]
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+byte-code: Beginning of buffer [11 times]
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+Mark set
+Auto-saving...done
+Auto-saving...done
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
+byte-code: Beginning of buffer [4 times]
+Auto-saving...done
+Mark set
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+byte-code: Beginning of buffer [14 times]
+byte-code: End of buffer [6 times]
+Auto-saving...done
+Auto-saving...done
+byte-code: Beginning of buffer [5 times]
+Auto-saving...done
+byte-code: Beginning of buffer [6 times]
+Quit
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/*Messages*
+Saving file /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java...
+Wrote /home/jashin/apcs-hw/18-WordSearchExtra/WordSearchExtra.java
