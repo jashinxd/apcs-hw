@@ -93,13 +93,13 @@ public class Sarray {
     public int size() {
         return data.length;
     }
-    /*
-    public int remove(int index) {
+  
+    public String remove(int index) {
 	if (index > data.length - 1 || index < 0) {
 	    throw new ArrayIndexOutOfBoundsException();
 	}
-	int oldVal = data[index];
-	int[] data2 = new int[data.length - 1];
+	String oldVal = data[index];
+	String[] data2 = new String[data.length - 1];
 	for (int i = index; i < data.length - 1; i++) {
 	    data[i] = data[i + 1];
 	}
@@ -109,7 +109,7 @@ public class Sarray {
 	data = data2;
         return oldVal;
     }
-    */
+    
     
      public static void main(String[] args){
 	Sarray s = new Sarray(10);
@@ -128,6 +128,8 @@ public class Sarray {
 	System.out.println("Element at index 3: " + s.get(3));
 	s.set(3, "hello");
 	System.out.println("After s.set(3, hello): " + s.printArray(s.data));
+	s.remove(4);
+	System.out.println("After s.remove(4): " + s.printArray(s.data));
 	/*
 	System.out.println("Original Array: " + s.printArray(s.data));
 	System.out.println("s.add(4): " + s.add(4));
