@@ -38,6 +38,7 @@ public class Sarray {
     }
 
     //Main Methods
+    
     public boolean add(String s) {
 	//Add int to the end, grow if needed
 	/*if (i != (int)i){
@@ -109,8 +110,12 @@ public class Sarray {
 	data = data2;
         return oldVal;
     }
-    
-    
+
+    public String[] getData(){
+	return data;
+    }
+
+    /*
      public static void main(String[] args){
 	Sarray s = new Sarray(10);
 	System.out.println("Original Array: " + s.printArray(s.data));
@@ -141,6 +146,7 @@ public class Sarray {
 	System.out.println("Size of data array: " + s.size());
 	System.out.println("s.remove(7): " + s.remove(7));
 	System.out.println("After s.remove(7): " + s.printArray(s.data));
-	*/
+	
      }
+*/
 }
