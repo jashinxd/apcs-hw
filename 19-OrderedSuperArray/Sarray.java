@@ -8,9 +8,9 @@ public class Sarray {
     private Random rnd;
 
     //Constructor
-    public Sarray(int i) {
+    public Sarray() {
 	//Start array at size 10
-	data = new String[i];
+	data = new String[10];
 	/*
 	rnd = new Random();
 	for (int index = 0; index < data.length; index++) {
@@ -55,14 +55,14 @@ public class Sarray {
 	return true;
     }
 
-    /*
-    public void add(int index, int i) {
+    
+    public void add(int index, String i) {
 	//Add at index, shifts everything else down
 	if (index > data.length - 1 || index < 0) {
 	    throw new ArrayIndexOutOfBoundsException();
 	}
-	int[] data2 = new int[data.length + 1];
-	if (data[data.length - 1] != 0){
+	String[] data2 = new String[data.length + 1];
+	if (data[data.length - 1] != null){
 	    add1index();
 	}
 	for (int x = data.length - 1; x > index; x = x - 1) {
@@ -70,7 +70,7 @@ public class Sarray {
 	}
 	data[index] = i;
     }
-    */
+    
 
     public String get(int index) {
 	//returns String at index 
