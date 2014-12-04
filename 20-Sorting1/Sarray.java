@@ -140,6 +140,25 @@ public class Sarray {
 	}
     }
 
+    public void ssort() {
+	for (int i = 0; i < data.length; i++) {
+	    String min = data[i];
+	    int n = i;
+	    for (int ind = i; ind < data.length; ind++) {
+		if (data[ind].compareTo(min) < 0) {
+		    min = data[ind];
+		    n = ind;
+		}
+	    }
+	    System.out.println(min);
+	    data[n] = data[i];
+	    data[i] = min;
+	    System.out.println(printArray(data));
+	    break;
+	}
+    }
+    
+
     /*
      public static void main(String[] args){
 	Sarray s = new Sarray(10);
