@@ -8,9 +8,9 @@ public class Sarray {
     private Random rnd;
 
     //Constructor
-    public Sarray() {
+    public Sarray(int i) {
 	//Start array at size 10
-	data = new String[10];
+	data = new String[2];
 	/*
 	rnd = new Random();
 	for (int index = 0; index < data.length; index++) {
@@ -19,6 +19,10 @@ public class Sarray {
 	*/
 	nextBlank = 0;
     }
+    
+    public Sarray() {
+	this(10);
+    }
 
     //Helper Methods
     public String printArray(String[] StringArray) {
@@ -26,13 +30,20 @@ public class Sarray {
 	for (int i = 0; i < StringArray.length; i++){
 	    s = s + StringArray[i] + ", ";
 	}
-	return s.substring(0,s.length() - 2) + "}";
+	if (!(s.equals("{"))) {
+	    s = s.substring(0,s.length() - 2) + "}";
+	} else {
+	    s = s + "}";
+	}
+	return s;
     }
 
     public void add1index() {
 	String[] data2 = new String[data.length + 1];
-	for (int index = 0; index < data.length; index++) {
-	    data2[index] = data[index];
+	if (data.length != 0) {
+	    for (int index = 0; index < data.length; index++) {
+		data2[index] = data[index];
+	    }
 	}
 	data = data2;
     }
@@ -44,6 +55,9 @@ public class Sarray {
 	/*if (i != (int)i){
 	    throw new ArrayStoreException();
 	}*/
+	if (data.length == 0){
+	    add1index();
+	} 
 	if (data[data.length - 1] != null){
 	    add1index();
 	}
@@ -113,6 +127,17 @@ public class Sarray {
 
     public String[] getData(){
 	return data;
+    }
+
+    public void isort() {
+	for (int n = 1; n < data.length; n++) {
+	    int i;
+	    String s = data[n];
+	    for (i = n; i > 0 && s.compareTo(data[i-1]) < 0; i--) {
+		data[i] = data[i-1];
+	    }
+	    data[i] = s;
+	}
     }
 
     /*

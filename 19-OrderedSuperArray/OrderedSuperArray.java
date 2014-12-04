@@ -1,27 +1,48 @@
 public class OrderedSuperArray extends Sarray {
 
-    private String[] d = new String[0];
-
     public boolean add(String s) {
-	if (d.length == 0) {
+	if (size() == 0) {
 	    super.add(s);
+	    return true;
 	}
-	else if (d[d.length - 1] != null) {
-	    super.add1index();
+	else if (get(size() - 1) != null) {
+	    add1index();
 	}
-	for (int i = 0; i < d.length; i++) {
-	    if (s.compareTo(d[i]) > 0) {
+	for (int i = 0; i < size() + 1; i++) {
+	    if (get(i) == null) {
 		super.add(i,s);
 		break;
+	    } else if (s.compareTo(get(i)) < 0) {
+		super.add(i,s);
+		break;   
 	    }
 	}
 	return true;
     }
 
+    public String set(String word, int i) {
+	String result = get(i);
+	remove(i);
+	add(word);
+	return result;
+    }
+
     public static void main(String[] args) {
 	OrderedSuperArray s = new OrderedSuperArray();
 	s.add("hi");
-	System.out.println(s.printArray
+	s.add("bye");
+	s.add("yo");
+	s.add("wassup");
+	s.add("nice");
+	s.add("hey");
+	s.add("seeya");
+	s.add("peace");
+	s.add("chill");
+	s.add("go");
+	s.add("stay");
+	s.add("dang");
+	s.set("zany", 0);
+	System.out.println(s.printArray(s.getData()));
     }
 }
     
