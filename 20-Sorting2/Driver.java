@@ -12,8 +12,9 @@ public class Driver{
 	s.add("peace");
 	s.add("chill");
 	s.add("go");
-	s.bsort();
-	//s.ssort();
+	//s.isort();
+	s.ssort();
+	//s.bsort();
 	System.out.println(s.printArray(s.getData()));
     }
 }
