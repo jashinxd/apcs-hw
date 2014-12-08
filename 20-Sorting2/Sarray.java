@@ -154,7 +154,23 @@ public class Sarray {
 	    data[i] = min;
 	}
     }
-    
+
+    public void bsort() {
+	int again = 0;
+	while (again < data.length) {
+	    for (int i = 0; i < data.length - 1; i++) {
+		String first = data[i];
+		String second = data[i+1];
+		if (data[i].compareTo(data[i+1]) > 0) {
+		    data[i+1] = first;
+		    data[i] = second;
+		    again = 0;
+		} else {
+		    again++;
+		}
+	    }
+	}
+    }
 
     /*
      public static void main(String[] args){
