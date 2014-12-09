@@ -1,11 +1,11 @@
 <b>Trial 1:</b>
-isort:
+\nisort:
 * Number of assignments: 136
 * Number of loops: 98
-ssort:
+\nssort:
 * Number of assignments: 109
 * Number of loops: 209
-bsort:
+\nbsort:
 * Number of assignments: 994
 * Number of loops: 280
 
