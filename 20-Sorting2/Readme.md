@@ -58,7 +58,7 @@
 
 isort is the most effecient, then ssort, then bsort, in terms of assignments and loops
 
-In terms of time:
+In terms of time:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;20 items:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isort: ~0.132s<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ssort: ~0.138s<br>
