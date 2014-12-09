@@ -56,10 +56,11 @@
 * Number of assignments: 1008.6
 * Number of loops: 293.3
 
-<h3>Analysis:</h3><br>
+<h3>Analysis:</h3>
+
 isort is the most effecient, then ssort, then bsort, in terms of assignments and loops
 
-<font size = 32><b>In terms of time:</b></font><br>
+<h3>In terms of time:</h3>
 &nbsp;&nbsp;&nbsp;&nbsp;20 items:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isort: ~0.132s<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ssort: ~0.138s<br>
