@@ -1,13 +1,13 @@
-Trial 1:
+<b>Trial 1:</b>
 isort:
-Number of assignments: 136
-Number of loops: 98
+* Number of assignments: 136
+* Number of loops: 98
 ssort:
-Number of assignments: 109
-Number of loops: 209
+* Number of assignments: 109
+* Number of loops: 209
 bsort:
-Number of assignments: 994
-Number of loops: 280
+* Number of assignments: 994
+* Number of loops: 280
 
 Trial 2:
 isort:
