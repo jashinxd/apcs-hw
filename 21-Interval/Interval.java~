@@ -1,0 +1,11 @@
+import java.util.*;
+import java.io.*;
+
+public class Interval {
+
+    private double low,high;
+    public Interval() {
+	Random rnd = new Random;
+	low = rnd.nextDouble();
+        high = low + rnd.nexDouble();
+    }
