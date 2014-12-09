@@ -3,11 +3,11 @@
 <b>isort:</b>
 * Number of assignments: 136
 * Number of loops: 98
-<br>
+
 <b>ssort:</b>
 * Number of assignments: 109
 * Number of loops: 209
-<br>
+
 <b>bsort:</b>
 * Number of assignments: 994
 * Number of loops: 280
