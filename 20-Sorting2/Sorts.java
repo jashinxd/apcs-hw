@@ -14,7 +14,7 @@ class Sorts {
     }
     
     public Sorts() {
-	this(20);
+	this(100000);
     }
     
     public void fill(){
@@ -49,6 +49,7 @@ class Sorts {
 	    }
 	    data[j+1]=tmp;
 	    counta++;
+	    countl++;
 	}
 	System.out.println("Number of assignments: " + counta);
 	System.out.println("Number of loops: " + countl);
@@ -60,7 +61,7 @@ class Sorts {
 	int mi;
 	int counta = 0;
 	int countl = 0;
-	for ( i = 0; i < data.length-1; i++) {
+	for (i = 0; i < data.length-1; i++) {
 	    mi = i;
 	    counta++;
 	    for (j=i+1;j<data.length;j++) {
@@ -74,6 +75,32 @@ class Sorts {
 	    data[mi]=data[i];
 	    data[i]=tmp;
 	    counta = counta + 3;
+	    countl++;
+	}
+	System.out.println("Number of assignments: " + counta);
+	System.out.println("Number of loops: " + countl);
+    }
+
+    public void bsort() {
+	int again = 0;
+	int counta = 0;
+	int countl = 0;
+	while (again < data.length) {
+	    for (int i = 0; i < data.length - 1; i++) {
+		int first = data[i];
+		int second = data[i+1];
+		if (data[i] > data[i+1]) {
+		    data[i+1] = first;
+		    data[i] = second;
+		    again = 0;
+		    counta = counta + 3;
+		} else {
+		    again++;
+		    counta++;
+		}
+		countl++;
+		counta = counta + 2;
+	    }
 	    countl++;
 	}
 	System.out.println("Number of assignments: " + counta);
@@ -99,15 +126,22 @@ class Sorts {
     public static void main(String[] args) {
 	Sorts s = new Sorts();
 	s.backup();
-	System.out.println("Original Array: " + s);
+	//System.out.println("Original Array: " + s);
 	//s.builtin();
+	/*
 	System.out.println("isort:");
 	s.isort();
-	System.out.println("isort sorting: " + s);
+	//System.out.println("isort sorting: " + s);
 	s.restore();
-	System.out.println("\nOriginal Array: " + s);
+	//System.out.println("\nOriginal Array: " + s);
 	System.out.println("ssort:");
 	s.ssort();
-	System.out.println("ssort sorting: " + s);
+	//System.out.println("ssort sorting: " + s);
+	s.restore();
+	*/
+	//System.out.println("\nOriginal Array: " + s);
+	System.out.println("bsort:");
+	s.bsort();
+	//System.out.println("bsort sorting: " + s);
     }
 }
