@@ -1,6 +1,6 @@
 <h1>Comparisons between isort, ssort, and bsort</h1>
 
-<b>Trial 1:</b>
+<font size = 18><b>Trial 1:</b></font>
 
 <b>isort:</b>
 * Number of assignments: 136
@@ -14,7 +14,7 @@
 * Number of assignments: 994
 * Number of loops: 280
 
-<b>Trial 2:</b>
+<font size = 18><b>Trial 2:</b></font>
 
 <b>isort:</b>
 * Number of assignments: 108
@@ -28,7 +28,7 @@
 * Number of assignments: 938
 * Number of loops: 280
 
-<b>Trial 3:</b>
+<font size = 18><b>Trial 3:</b></font>
 
 <b>isort:</b>
 * Number of assignments: 129
@@ -42,7 +42,7 @@
 * Number of assignments: 1094
 * Number of loops: 320
 
-<b>Average:</b>
+<font size = 18><b>Average:</b></font>
 
 <b>isort:</b>
 * Number of assignments: 124.3
@@ -56,9 +56,10 @@
 * Number of assignments: 1008.6
 * Number of loops: 293.3
 
+<font size = 18><b>Analysis</b></font>
 isort is the most effecient, then ssort, then bsort, in terms of assignments and loops
 
-In terms of time:<br>
+<font size = 18><b>In terms of time:</b></font><br>
 &nbsp;&nbsp;&nbsp;&nbsp;20 items:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isort: ~0.132s<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ssort: ~0.138s<br>
