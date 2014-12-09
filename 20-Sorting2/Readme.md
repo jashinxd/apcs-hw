@@ -1,14 +1,14 @@
 <b>Trial 1:</b>
-<br>
-isort:
+
+<b>isort:</b>
 * Number of assignments: 136
 * Number of loops: 98
 <br>
-ssort:
+<b>ssort:</b>
 * Number of assignments: 109
 * Number of loops: 209
 <br>
-bsort:
+<b>bsort:</b>
 * Number of assignments: 994
 * Number of loops: 280
 
