@@ -1,4 +1,4 @@
-public class basechar{
+public class basechar implements Comparable {
     private int health = 200;
     private  int attack = 30;
     private  int armor = 10;
@@ -50,5 +50,9 @@ public class basechar{
     }
     public int getcrit(){
         return this.luck;
+    }
+    public int compareTo(Object other) {
+	basechar o = (basechar) other;
+	return getname().compareTo(o.getname());
     }
 }
