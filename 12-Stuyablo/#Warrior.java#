@@ -17,16 +17,9 @@ public class Warrior extends basechar implements Comparable{
         return super.getname();
     }
     
-    public int compareTo(Object other) {
-	Warrior o = (Warrior) other;
-	return getname().compareTo(o.getname());
-    }
+    public int compareTo(Object o) {
+	
     
     public static void main(String[] args) {
-	Warrior w1 = new Warrior("Jason");
-	Warrior w2 = new Warrior("Shin");
-	System.out.println(w1.compareTo(w2));
-	
-    }
 	
 }
