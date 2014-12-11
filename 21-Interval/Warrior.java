@@ -58,7 +58,7 @@ public class Warrior extends basechar {
 	for (int i = 0; i < wa.length; i++) {
 	    wa[i] = new Warrior();
 	}
-	System.out.println("Testing Sorting Array of Ints: ");
+	System.out.println("Testing Sorting Array of Warriors: ");
 	System.out.println("Original Array: " + Arrays.toString(wa));
 	Arrays.sort(wa);
 	System.out.println("After Sorting: " + Arrays.toString(wa));
