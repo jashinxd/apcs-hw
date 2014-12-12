@@ -1,0 +1,14 @@
+public class search {
+
+    private Comparable[] c = new Comparable[10];
+
+    public search(int i) {
+	c = new Comparable[i];
+    }
+
+    public Comparable lsearch(Comparable oc) {
+	for (int i = 0; i < c.length; i++)
+    
+    public static void main(String[] args) {
+	int Array[] 
+    
