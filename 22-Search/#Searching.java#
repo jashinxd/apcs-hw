@@ -71,13 +71,13 @@ public class Searching {
 	return null;
     }
 
-    public int bsearch(Comparable c) {
+    public Comparable bsearch(Comparable c) {
 	int low = 0;
 	int high = ca.length;
 	int mid = (low + high) / 2;
 	while (low <= high) {
 	    if (ca[mid].equals(c)) {
-		return mid;
+		return c;
 	    } else {
 		if (c.compareTo(ca[mid]) > 0) {
 		    low = mid + 1;
@@ -87,7 +87,7 @@ public class Searching {
 	    }
 	    mid = (low + high) / 2;
 	}
-	return -1;
+	return null;
     }
 
     public Comparable rbsearch(Comparable c, int low, int high) {
