@@ -4,7 +4,7 @@ import java.awt.*;
 //Look up Java Layout Manager and Java Swing Components to learn
 //more about GUIs
 
-public class Gui1 extends JFrame {
+public class Gui1 extends JFrame implements ActionListener{
 
     private Container pane;
     private JButton b1,b2;
