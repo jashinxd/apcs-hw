@@ -74,8 +74,8 @@ public class Searching {
     public Comparable bsearch(Comparable c) {
 	int low = 0;
 	int high = ca.length - 1;
-	int mid = (low + high) / 2;
 	while (low <= high) {
+	    int mid = (low + high) / 2;
 	    if (ca[mid].equals(c)) {
 		return c;
 	    } else {
@@ -85,7 +85,6 @@ public class Searching {
 		    high = mid - 1;
 		}
 	    }
-	    mid = (low + high) / 2;
 	}
 	return null;
     }
@@ -112,10 +111,10 @@ public class Searching {
     }
 
     public static void main(String[] args) {
-	Searching s = new Searching(1000000);
-	Random rnd = new Random(6767); 
+	Searching s = new Searching(11);
+	Random rnd = new Random(); 
 	for (int i = 0; i < s.size(); i++) {
-	    s.add(rnd.nextInt(50));
+	    s.add(rnd.nextInt(10));
 	}
 	/*
 	s.add("hi");
@@ -130,10 +129,10 @@ public class Searching {
 	s.add("go");
 	*/
 	s.sort();
-	//System.out.println("Original Array: " + s);
-	//System.out.println(s.lsearch(49));
-	System.out.println(s.bsearch(9));
-	//System.out.println(s.rbsearch(9));
+	System.out.println("Original Array: " + s);
+	System.out.println(s.lsearch(5));
+	System.out.println(s.bsearch(5));
+	System.out.println(s.rbsearch(5));
 	//System.out.println(s.lsearch(20));
 	//System.out.println(s.bsearch(20));
 	//System.out.println(s.rbsearch(20));
