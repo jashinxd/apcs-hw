@@ -1,0 +1,12 @@
+https://github.com/edwardshen123/ZombieMiami
+
+Comments are very descriptive, I am able to understand most of what is going on.
+
+
+Zombie.java:
+line@7-8 Not really sure what r and er are
+line@57 Speed of charger seems to be too high, maybe make it a bit slower.
+line@113-114 Instead of making them home in on the player, maybe make them move randomly until the player is near? Just my opinion
+
+GamePanel.java:
+line@343 and 369 - Seems to be two draw weapons, specify that you are drawing the name of the weapon
